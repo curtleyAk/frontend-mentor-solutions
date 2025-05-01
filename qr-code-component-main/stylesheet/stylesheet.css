@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400..700&display=swap');
+
+/* Reset any default margins and padding that comes with the boiler-plate */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', serif;
+    font-size: 15px;
+    background: hsl(212, 45%, 89%);
+    display: flex;
+    /* Stack the container vertically */
+    flex-direction: column;
+    min-height: 100vh; /* make sure the body is displayed over the entire webpage */
+}
+
+.container {
+    max-width: 300px;
+    background: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-radius: 20px;
+    /* Set the margins to auto to center the container in the middle of the webpage */
+    margin: auto;
+}
+
+.container img {
+    /* Change the size of the image to be proportionate to it's parent container */
+    max-width: 100%;
+    height: auto;
+    /* Change the display of the image to make sure all other content will fall below it */
+    display: block;
+    border-radius: 20px;
+}
+
+.container h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 5px;
+    color: hsl(218, 44%, 22%);
+}
+
+.container p{
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    color: hsl(216, 15%, 48%);
+    margin: 0 5px;
+}
+
+/* Because the margin in the container is set to auto, any other container will by default move to the bottom of the webpage */
+.attribution {
+    width: 100%;
+    /* Prevent div from shrinking if content grows. */
+    flex-shrink: 0;
+    margin-bottom: 10px;
+}
