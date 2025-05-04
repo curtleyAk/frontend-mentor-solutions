@@ -35,8 +35,11 @@ body {
 }
 
 header, header img {
+    /* Change the size of the image to be proportionate to it's parent container */
     max-width: 100%;
-    max-height: 200px !important;
+    max-height: auto;
+    /* Change the display of the image to make sure all other content will fall below it */
+    display: block;
     border-radius: 10px;
 }
 
@@ -63,6 +66,7 @@ header, header img {
 }
 
 .preview__title h1 {
+    /* Slace the font size as the view point width of the container becomes smaller */
     font-size: clamp(1.1rem, 1rem + 1.5vw, 1.5rem);
     font-weight: 800;
     margin-bottom: 12px;
@@ -85,6 +89,7 @@ header, header img {
 }
 
 .author__details p {
+    /* Slace the font size as the view point width of the container becomes smaller */
     font-size: clamp(12px, 10px + 1.5vw, 16px);
 }
 
@@ -94,8 +99,19 @@ header, header img {
     margin-right: 12px;
 }
 
+/* Because the margin in the container is set to auto, any other container will by default move to the bottom of the webpage */
+.attribution {
+    font-size: 11px; text-align: center;
+    width: 100%;
+    /* Prevent div from shrinking if content grows. */
+    flex-shrink: 0; 
+    margin-bottom: 10px;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Media query for screen sizes 375pc and smaller */
 @media(max-width: 375px) {
-    
     .container {
         max-width: 327px;
         max-height: 501px;
