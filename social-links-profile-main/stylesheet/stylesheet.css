@@ -1,0 +1,137 @@
+/* Import font style from local asset folder */
+/* Define the Regular Font Weight */
+@font-face {
+    /* name of the font */
+    font-family: 'Inter';
+    src: url('../assets/fonts/static/Inter-Regular.ttf');
+    /* Regular font weight */
+    font-weight: 400;
+    font-style: normal;
+    /* Apply to have font load with better performance */
+    font-display: swap;
+}
+/* Define the Semi-Bold Font Weight */
+@font-face {
+    /* name of the font */
+    font-family: 'Inter';
+    src: url('../assets/fonts/static/Inter-SemiBold.ttf');
+    /* Semi-Bold font weight */
+    font-weight: 600;
+    font-style: normal;
+    /* Apply to have font load with better performance */
+    font-display: swap;
+}
+/* Define the Bold Font Weight */
+@font-face {
+    /* name of the font */
+    font-family: 'Inter';
+    src: url('../assets/fonts/static/Inter-SemiBold.ttf');
+    /* Bold font weight */
+    font-weight: 700;
+    font-style: normal;
+    /* Apply to have font load with better performance */
+    font-display: swap;
+}
+
+
+* {
+    box-sizing: border-box;
+    /* Reset all default margins and padding */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    max-width: 1440px;
+    font-size: 14px;
+    color: hsl(0, 0%, 100%);
+    /* Display content in the middle of webpage */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: hsl(0, 0%, 8%);
+}
+
+.container {
+    max-width: 384px;
+    height: auto;
+    padding: 40px;
+    background: hsl(0, 0%, 12%);
+    border-radius: 16px;
+    margin: auto;
+}
+
+#profile {
+    /* Display as Flex box and position elements in column format */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+#profile img {
+    width: 88px;
+    /* Turn Image into a circle */
+    border-radius: 50%;
+    margin-bottom: 24px;
+}
+
+#profile h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#profile h3 {
+    color: hsl(75, 94%, 57%);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+#links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#links .btn {
+    /* Reset all default button styling  */
+    all: unset;
+    max-width: 304px;
+    text-align: center;
+    font-weight: 600;
+    background: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 100%);
+    padding: 14px 0;
+    border-radius: 8px;
+}
+
+#links .btn:hover {
+    background: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 20%);
+    /* Add custom black cursor to the hover state */
+    cursor: url('../assets/images/icons8-cursor-32.png'), pointer;
+}
+
+/* Because the margin in the container is set to auto, any other container will by default move to the bottom of the webpage */
+.attribution {
+    font-size: 11px; text-align: center;
+    width: 100%;
+    /* Prevent div from shrinking if content grows. */
+    flex-shrink: 0; 
+    margin-bottom: 10px;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(max-width: 375px){
+    .container {
+        margin: 24px;
+    }
+    /* make the width of the buttons responsive to it's container */
+    #links .btn{
+        width: auto;
+    }
+}
