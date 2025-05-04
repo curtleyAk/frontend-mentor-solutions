@@ -1,0 +1,103 @@
+/* Import font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Reset any default margins and padding that comes with the boiler-plate */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: 'Figtree', sans-serif ;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    font: hsl(0, 0%, 7%);
+    background: hsl(47, 88%, 63%);
+    /* Display content in the middle of webpage */
+    display: flex;
+    /* change flex direction from default row to column alignment */
+    flex-direction: column;
+    min-height: 100vh; /* make sure the body is displayed over the entire webpage */
+}
+
+.container {
+    max-width: 384px;
+    max-height: 522px;
+    padding: 24px;
+    margin: auto;
+    border: hsl(0, 0%, 7%) 1px solid;
+    border-radius: 20px;
+    box-shadow: hsl(0, 0%, 7%) 8px 8px 0px 0px;
+    background: hsl(0, 0%, 100%);
+}
+
+header, header img {
+    max-width: 100%;
+    max-height: 200px !important;
+    border-radius: 10px;
+}
+
+.preview__title {
+    margin: 24px 0;
+}
+.preview__title .btn {
+    background: hsl(47, 88%, 63%);
+    padding: 8px 12px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+/* Using suedo class to style the first p child in container */
+.preview__title p:nth-of-type(1) {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.preview__title h1 {
+    font-size: clamp(1.1rem, 1rem + 1.5vw, 1.5rem);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.preview__title h1:hover {
+    color: hsl(47, 88%, 63%);
+    cursor: pointer;
+}
+
+.preview__title p:nth-of-type(2) {
+    font-weight: 100;
+    font-size: clamp(12px, 10px + 1.5vw, 16px);
+    color: hsl(0, 0%, 42%);
+}
+
+.author__details {
+    display: inline-flex;
+    align-items: center;
+}
+
+.author__details p {
+    font-size: clamp(12px, 10px + 1.5vw, 16px);
+}
+
+.author__details img {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+}
+
+@media(max-width: 375px) {
+    
+    .container {
+        max-width: 327px;
+        max-height: 501px;
+    }
+}
