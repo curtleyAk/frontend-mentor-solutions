@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400..700&family=Young+Serif&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', serif;
+    font-size: 16px;
+    color: hsl(30, 10%, 34%);
+    background: hsl(30, 54%, 90%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    background: hsl(0, 0%, 100%);
+    border-radius: 2rem;
+    max-width: 46rem;
+    padding: 2.5rem;
+    margin: 5rem auto;
+}
+
+header img {
+    width: 100%;
+    /* adjust the Images dimensions to maintain the specified width-to-height ratio within the container*/
+    aspect-ratio: auto;
+    border-radius: 0.75rem;
+    margin-block-end: 2.5rem;
+}
+
+header h1 {
+    font: 2.2rem 'Young Serif';
+    line-height: 1;
+    color:  hsl(24, 5%, 18%);
+    margin-block-end: 1.5rem;
+}
+
+header p {
+    margin-block-end: 2rem;
+}
+
+.preparation__info {
+    background: hsl(330, 100%, 98%);
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    margin-block-end: 2rem;
+}
+
+.preparation__info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: hsl(332, 51%, 32%);
+    margin-block-end: 1rem;
+}
+
+/* li::maker allows you to tarket the list marker and change its sizing and colour */
+.preparation__info li::marker, #ingrediants li::marker {
+    font-size: 0.8rem;
+    color: hsl(332, 51%, 32%);
+}
+.preparation__info li, #ingrediants li, #instructions li {
+    margin-left: 1.25rem;
+    /* Creates padding between the marker and the list content */
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+/* Only changes the span elements within the paragraph tags */
+.preparation__info span, #instructions span{
+    font-weight: 700;
+}
+
+#ingrediants, #instructions {
+    margin-block-end: 2rem;
+}
+
+hr {
+    margin-block: 2rem;
+    /* Change the colour and size of the horizontal line rule */
+    border-top: 1px solid hsl(30, 18%, 87%);
+}
+
+/* Targets all h2 */
+.recipe h2 {
+    font: 1.75rem 'Young Serif';
+    margin-bottom: 1.5rem;
+    color: hsl(14, 45%, 36%);
+}
+
+/* Targets the list numbers */
+#instructions li::marker {
+    font-weight: 700;
+    color: hsl(332, 51%, 32%);
+}
+
+#nutritional__info p {
+    margin-block-end: 1.5rem;
+}
+
+#nutritional__info table {
+    width: 100%;
+    border-collapse: collapse; /* Makes borders cleaner */
+}
+
+#nutritional__info td {
+    padding-block: 0.75rem;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+    /* Ensures labels and values are vertically aligned if text wraps */
+    vertical-align: middle;
+}
+
+/* Remove border from the last row */
+#nutritional__info td.no-boarder {
+    border-bottom: none;
+}
+
+#nutritional__info .nutritional-value {
+    font-weight: 700;
+    color: hsl(14, 45%, 36%);
+    padding-inline-end: 2rem; /* padding right */
+}
+
+#nutritional__info .nutritional-label {
+    padding-inline-start: 2rem; 
+    color: hsl(30, 10%, 34%); 
+}
+
+/* Because the margin in the container is set to auto, any other container will by default move to the bottom of the webpage */
+.attribution {
+    font-size: 11px; text-align: center;
+    width: 100%;
+    /* Prevent div from shrinking if content grows. */
+    flex-shrink: 0; 
+    margin-bottom: 10px;
+}
+
+@media(max-width: 375px) {
+    .container {
+        border-radius: 0;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    aside, main, header h1, header p {
+        margin: 2rem;
+    }
+    header img {
+        width: 100vw;
+        /* adjust the Images dimensions to maintain the specified width-to-height ratio within the container*/
+        aspect-ratio: auto;
+        border-radius: 0;
+        margin-block-end: 1rem;
+    }
+
+    .attribution {
+        margin: 10px 10px;
+    }
+}
