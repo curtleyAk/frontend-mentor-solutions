@@ -80,6 +80,7 @@ body {
     margin-block-end: 1.5rem;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 }
 
 .pricing p:nth-of-type(1){
@@ -120,7 +121,7 @@ body {
     margin-bottom: 10px;
 }
 
-@media(min-width: 375px){
+@media(min-width: 376px){
     .container {
         display: flex;
         width: auto;
