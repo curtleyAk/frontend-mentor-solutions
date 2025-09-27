@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/curtleyAk/frontend-mentor-solutions/tree/main/article-preview-component-master
-- Live Site URL: https://curtleyak.github.io/frontend-mentor-solutions/frontend-mentor-solutions/tree/main/article-preview-component-master
+- Live Site URL: https://curtleyak.github.io/frontend-mentor-solutions/article-preview-component-master/
 
 ## My process
 
